@@ -16,7 +16,14 @@ public class ArrayQueue {
 
     //enqueue
     public boolean enqueue(String item){
-        if (tail == n) return false;
+        if (tail == n){
+            if (head == 0) return false;
+            for (int i = head;i<tail;++i){
+                items[i-head] = items[i];
+            }
+            tail-=head;
+            head = 0;
+        }
         items[tail] = item;
         ++tail;
         return true;
