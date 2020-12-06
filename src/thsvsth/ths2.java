@@ -11,7 +11,7 @@ public class ths2 {
     }
 }
 
-public class Example1{
+class Example1{
     public static void main(String args[]){
         try{
             ths2 obj=new ths2();
